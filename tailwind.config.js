@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'page-background': "url('image/cliff-brige.jpg')"
+        'page-background': "url('../image/cliff-brige.jpg')"
       }
     },
   },
