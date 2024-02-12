@@ -181,6 +181,27 @@ const useTicketStore = create<DnDState & DnDActions>((set, get) => ({
     id: StatusColumn
   ) => {
     const columns = new Map(get().board.columns);
+    // change title from selected ticket based on the ticket index and $id
+    const ticketSelect = columns.get(id)?.tickets.filter((t) => t.$id === ticket.$id);
+    if (ticketSelect) {
+      ticketSelect[0].title = "delete-ticket";
+    }
+
+    columns.set(id, {
+      id: id,
+      tickets: [
+        ...columns.get(id)!.tickets.filter((t) => t.$id !== ticket.$id),
+        ticketSelect![0]
+      ]
+    });
+
+    set({
+      board: {
+        columns
+      }
+    });
+
+    // delete ticket from database
 
     await database.deleteDocument(import.meta.env.VITE_DATABASE_ID, import.meta.env.VITE_COLLECTION_ID, ticket.$id);
 

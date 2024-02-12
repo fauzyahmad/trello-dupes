@@ -43,6 +43,12 @@ function TicketCard({
             classNameString="flex-1 text-base text-left text-gray-400"
             titleLoading="Adding new ticket..."
           />
+        ) : ticket.title === "delete-ticket" ? (
+          <SpinnerAnimation
+            classNameSpinner="h-5 w-5 border-t-pink-600"
+            classNameString="flex-1 text-base text-left text-gray-400"
+            titleLoading="Deleting ticket..."
+          />
         ) : (
           <>
             <span className={clsx( id === "completed" ? "line-through" : "", "flex-1 text-base text-left font-normal text-gray-800")}>
