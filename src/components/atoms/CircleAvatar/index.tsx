@@ -17,7 +17,7 @@ const CircleAvatar: React.FC<CircleAvatarProps> = ({ text }) => {
 
   return (
     <Popover as="div" className="relative">
-    {({ _, close}) => (
+    {({close}) => (
       <PopOverMenu
         buttonComponent={(
           <div className="w-10 h-10 rounded-full bg-sky-400 flex items-center justify-center">

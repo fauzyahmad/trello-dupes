@@ -48,7 +48,7 @@ export const TextAreaField = forwardRef<HTMLTextAreaElement, TextareaProps>(
           } else if (ref) {
             ref.current = node;
           }
-          textareaRef.current = node;
+          // textareaRef.current = node; // Remove this line
         }}
         name={name}
         className={clsx(

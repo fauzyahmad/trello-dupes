@@ -2,7 +2,7 @@ import { useAuthStore } from "../../../store";
 import CircleAvatar from '../../atoms/CircleAvatar';
 
 const NavBar = () => {
-  const [user, isLoggedIn] = useAuthStore((state) => [state.user, state.isLoggedIn]);
+  const [user] = useAuthStore((state) => [state.user]);
 
   return (
     <nav className="fixed h-14 left-0 right-0 z-5 flex w-full z-20 top-0 start-0 border-b shadow-md">
