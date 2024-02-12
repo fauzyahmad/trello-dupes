@@ -20,7 +20,7 @@ const TicketForm = ({formType, loading}: Props) => {
           placeholder="Write Ticket..."
           value={newTicketTitleInput}
           isFocused
-          className="text-2xl leading-6 py-4 font-semibold"
+          className="text-2xl leading-6 py-4 p-2 font-semibold"
           onChange={(e) => setNewTicketTitleInput(e.target.value)}
         />
       </div>
@@ -44,11 +44,11 @@ const TicketForm = ({formType, loading}: Props) => {
         </span>
         <TicketRadioGroup />
       </div>
-      <div className="mt-4">
+      <div className="mt-4 flex justify-end">
         <Button
           type="submit"
           disabled={loading === true|| newTicketTitleInput === "" || newTicketDescriptionInput === "" ? true : false}
-          className=" text-white bg-sky-500 hover:bg-sky-600 focus:ring-sky-500 focus:ring-offset-sky-200 active:bg-sky-600 active:ring-sky-900 active:ring-offset-sky-700 disabled:bg-gray-300"
+          className=" text-right text-white bg-sky-500 hover:bg-sky-600 focus:ring-sky-500 focus:ring-offset-sky-200 active:bg-sky-600 active:ring-sky-900 active:ring-offset-sky-700 disabled:bg-gray-300"
         >
           {formType === "new" ? "Add ticket" : (loading === true && formType === "update" ? "Updating ticket..." : "Update ticket")}
         </Button>

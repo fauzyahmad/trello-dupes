@@ -52,7 +52,7 @@ function Modal() {
             >
               {/* <div className="fixed inset-0 bg-black bg-opacity-25" /> */}
               <Dialog.Panel
-                className="w-full max-w-2xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl"
+                className="w-full max-w-xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl"
                 // onClose={toggleModal}
               >
                 <Dialog.Title as="h5" className="text-sm font-medium leading-4 text-gray-900">

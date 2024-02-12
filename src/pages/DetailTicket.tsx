@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useTicketStore } from "../store"
 import TicketForm from "../components/templates/TicketForm"
-import { useParams, useNavigate } from "react-router-dom"
+import { useParams, useNavigate, Link } from "react-router-dom"
 import { DnDActions, DnDState } from "../store/useTicketStore"
 import NavBar from "../components/molecules/NavBar"
+import { ArrowLeftIcon } from "@heroicons/react/16/solid"
+import BgScreen from "../components/templates/BgScreen"
 
 interface Params {
   id: string
@@ -41,7 +43,7 @@ function DetailTicket() {
 
 
   return (
-    <div>
+    <BgScreen>
       <NavBar />
       {loading ? (
         <div className="animate-pulse">
@@ -49,14 +51,18 @@ function DetailTicket() {
           </div>
         </div>
       ) : (
-        <form className="text-left my-0 mx-auto max-w-xl" onSubmit={handleSubmit}>
-          <h3 className="text-xl font-medium text-gray-800">
-            Ticket of
+        <form className="text-left my-0 mx-auto max-w-xl pt-14" onSubmit={handleSubmit}>
+          <Link to="/" className="flex items-center text-gray-400 mb-4">
+              <ArrowLeftIcon className="w-5 h-5 mr-4" />
+              Back
+            </Link>
+          <h3 className="text-lg font-medium text-gray-800">
+            Detail Ticket of
           </h3>
           <TicketForm formType="update" loading={loadingSubmit} />
         </form>
       )}
-    </div>
+    </BgScreen>
   )
 }
 
