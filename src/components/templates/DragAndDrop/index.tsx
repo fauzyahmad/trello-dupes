@@ -14,7 +14,6 @@ export default function DragAndDrop() {
     state.loading
   ]);
   useEffect(() => {
-    // Your logic here
     getBoard();
   }, [ getBoard ]);
 
