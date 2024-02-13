@@ -22,6 +22,7 @@ This project is a Trello-like application that allows users to manage and organi
 - [Appwrite](https://appwrite.io/) for authentication and database
 - [Tailwind CSS](https://tailwindcss.com/) for styling
 - [Zustand](https://zustand.surge.sh/) for state management
+- [Netlify](https://www.netlify.com/) for deployment
 
 ## Demo
 
