@@ -1,4 +1,4 @@
-# Project Name
+# Trello Dupes
 
 ## Description
 
@@ -6,7 +6,7 @@ This project is a Trello-like application that allows users to manage and organi
 
 ## Table of Contents
 
-- [Project Name](#project-name)
+- [Trello Dupes](#trello-dupes)
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
   - [Tech Stack](#tech-stack)
