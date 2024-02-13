@@ -2,7 +2,7 @@
 
 import { DocumentDuplicateIcon, DocumentMagnifyingGlassIcon, EllipsisHorizontalCircleIcon, EllipsisHorizontalIcon, TrashIcon } from "@heroicons/react/16/solid";
 import { StatusColumn, Ticket } from "../../../types/DragAndDrop";
-import { DraggableProvidedDragHandleProps, DraggableProvidedDraggableProps } from "@hello-pangea/dnd";
+import { DraggableProvidedDragHandleProps, DraggableProvidedDraggableProps, DraggableStateSnapshot, DraggableStyle, DropAnimation } from "@hello-pangea/dnd";
 import { Popover } from "@headlessui/react";
 import { useTicketStore } from "../../../store";
 import { Link } from "react-router-dom";

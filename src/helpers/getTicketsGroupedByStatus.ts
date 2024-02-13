@@ -13,8 +13,6 @@ async function getTicketsGroupedByStatus(): Promise<{ columns: Map<StatusColumn,
 
     const tickets = response.documents;
 
-    console.log(tickets)
-
     const columns = tickets.reduce((grouped, ticket) => {
       if(!grouped.get(ticket.status)) {
         grouped.set(ticket.status, {
@@ -34,8 +32,6 @@ async function getTicketsGroupedByStatus(): Promise<{ columns: Map<StatusColumn,
       return grouped;
 
     }, new Map<StatusColumn, Column>);
-
-    console.log('columns:', columns)
 
     // if column is empty, add it to the map
     const columnStatusTypes: StatusColumn[] = ['open', 'in-progress', 'completed'];

@@ -51,16 +51,18 @@ function DetailTicket() {
           </div>
         </div>
       ) : (
-        <form className="text-left my-0 mx-auto max-w-xl pt-14" onSubmit={handleSubmit}>
-          <Link to="/" className="flex items-center text-gray-400 mb-4">
-              <ArrowLeftIcon className="w-5 h-5 mr-4" />
-              Back
-            </Link>
-          <h3 className="text-lg font-medium text-gray-800">
-            Detail Ticket of
-          </h3>
-          <TicketForm formType="update" loading={loadingSubmit} />
-        </form>
+        <div className="max-w-2xl my-0 mx-auto mt-20 bg-white rounded-lg">
+          <form className="text-left p-6" onSubmit={handleSubmit}>
+            <Link to="/" className="flex items-center text-gray-400 mb-4">
+                <ArrowLeftIcon className="w-5 h-5 mr-4" />
+                Back
+              </Link>
+            <h3 className="text-lg font-medium text-gray-800">
+              Detail Ticket of
+            </h3>
+            <TicketForm formType="update" loading={loadingSubmit} />
+          </form>
+        </div>
       )}
     </BgScreen>
   )
